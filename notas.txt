@@ -1,0 +1,59 @@
+
+
+git init
+
+git status
+
+gid add . 
+
+git commit -m "Primer commit"
+
+heroku login
+
+heroku git:remote -a koke-webpage
+
+git push heroku master
+
+heroku open
+
+git add . 
+
+git status 
+
+git commit -m "Cambios 2020-0828 06:00 pm"
+
+git remote add origin https://github.com/KokeSky/webserver-express.git
+
+git remote
+
+git push -u origin master
+
+git push heroku master
+
+git tag -a v1.0.0 -m "Primera version del proyecto"
+
+git push --tags
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
