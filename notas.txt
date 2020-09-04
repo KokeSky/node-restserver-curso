@@ -42,6 +42,20 @@ git remote -v
 git push heroku master
 heroku open
 
+----
+git add .
+
+git commit  -m "RestServer - Usuario"
+
+git push heroku master
+
+heroku open
+
+
+
+
+
+
 
 
 
