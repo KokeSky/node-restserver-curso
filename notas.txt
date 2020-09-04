@@ -51,6 +51,44 @@ git push heroku master
 
 heroku open
 
+---
+
+git status
+
+git push
+
+git push origin master
+
+git tags
+
+git tag -a v0.0.3 -m "Usuario y RESTServer"
+
+git push --tags
+
+
+---
+heroku config
+
+heroku config:set nombre="Jorge Luis"
+
+heroku config:unset nombre
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
