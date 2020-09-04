@@ -34,6 +34,17 @@ git tag -a v1.0.0 -m "Primera version del proyecto"
 
 git push --tags
 
+****
+
+heroku create -h 
+heroku create     nos crea el nombre heroku
+git remote -v
+git push heroku master
+heroku open
+
+
+
+
 
 
 
