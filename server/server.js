@@ -14,11 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
     // parse application/json
 app.use(bodyParser.json())
 
-app.use(require('./routes/usuario'));
+//app.use(require('./routes/login'));
 
-// mongoose.set('useNewUrlParser', true);
-// mongoose.set('useFindAndModify', false);
-// mongoose.set('useCreateIndex', true);
+// Configuracion Global de Rutas
+app.use(require('./routes/index'));
 
 console.log(`Conectando a :${process.env.URLDB}`.yellow);
 
