@@ -84,7 +84,7 @@ async function verify(token) {
 app.post('/googlesignin', async(req, res) => {
     let token = req.body.idtoken;
 
-    console.log(token);
+    //console.log(token);
 
     let googleUser = await verify(token)
         .catch(e => {
@@ -163,5 +163,4 @@ app.post('/googlesignin', async(req, res) => {
 
 });
 
-module.exports = app;
 module.exports = app;

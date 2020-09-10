@@ -43,6 +43,10 @@ let usuarioEsquema = new Schema({
         type: Boolean,
         require: [true],
         default: false
+    },
+    creado: {
+        type: Date,
+        default: Date.now()
     }
 });
 

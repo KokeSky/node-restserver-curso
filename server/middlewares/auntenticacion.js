@@ -24,11 +24,6 @@ let verificaToken = (req, res, next) => {
         next();
     });
 
-
-    // res.json({
-    //     token
-    // });
-
 };
 
 //===============================

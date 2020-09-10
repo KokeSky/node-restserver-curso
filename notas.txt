@@ -74,6 +74,17 @@ heroku config:set nombre="Jorge Luis"
 heroku config:unset nombre
 
 
+Marlin para tacos gobernador
+Ingredientes 
+750 grms de marlin o atun ahumado
+250 grms de tocino o panceta
+500 grms de tomate
+4 chiles verdes tatemar y picar en cuadros
+2 cebollas 
+pimienta al gusto
+( tip  no se le pone sal )
+
+
 
 
 
