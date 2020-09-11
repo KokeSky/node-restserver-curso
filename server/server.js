@@ -26,6 +26,7 @@ app.use(require('./routes/index'));
 
 console.log(`Conectando a :${process.env.URLDB}`.yellow);
 
+
 mongoose.connect(process.env.URLDB, {
         useNewUrlParser: true,
         useUnifiedTopology: true,

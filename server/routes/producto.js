@@ -155,13 +155,12 @@ app.get('/producto/buscar/:termino', verificaToken, (req, res) => {
     // });
 });
 
-let getCategoriaById = (req, res, next) => {
+function getCategoriaById(req) {
 
     const { idCategoria } = req.body;
 
     if (idCategoria === undefined) {
         req.categoria = null;
-        next();
         return;
     }
 
@@ -180,8 +179,7 @@ let getCategoriaById = (req, res, next) => {
                 }
             });
         } else {
-            req.categoria = categoriaDB;
-            next();
+            return req.categoria = categoriaDB;
         }
     });
 };
@@ -189,10 +187,12 @@ let getCategoriaById = (req, res, next) => {
 // ============================
 // Crear nuevo Producto 
 // ============================
-app.post('/producto', [verificaToken, getCategoriaById], (req, res) => {
+app.post('/producto', verificaToken, (req, res) => {
 
     const { nombre, precioUni, descripcion } = req.body;
+
     const usuario = req.usuario;
+    getCategoriaById(req);
     const categoria = req.categoria;
 
     let producto = new Producto({
@@ -228,11 +228,12 @@ app.post('/producto', [verificaToken, getCategoriaById], (req, res) => {
 // ============================
 // Actualiza Producto 
 // ============================
-app.put('/producto/:id', [verificaToken, getCategoriaById], (req, res) => {
+app.put('/producto/:id', verificaToken, (req, res) => {
     const id = req.params.id;
 
     const { nombre, precioUni, descripcion, disponible } = req.body;
 
+    getCategoriaById(req);
     const categoria = req.categoria;
 
     let modificarProducto = {};
